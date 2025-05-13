@@ -49,14 +49,28 @@ startButton.addEventListener('click', function () {
 function update() {
     if (evilStormCheckbox.checked) {
         evilStorm.play()
-    }
-    if (morningBirdsCheckbox.checked) {
+        morningBirds.pause()
+        nightForestWinds.pause()
+    } else if (morningBirdsCheckbox.checked) {
         morningBirds.play()
-    }
-    if (nightForestWindsCheckbox.checked) {
+        evilStorm.pause()
+        nightForestWinds.pause()
+    } else if (nightForestWindsCheckbox.checked) {
         nightForestWinds.play()
+        evilStorm.pause()
+        morningBirds.pause()
+    }else{
+        evilStorm.pause()
+        morningBirds.pause()
+        nightForestWinds.pause()
     }
 }
+
+function setupUpdate() {
+    setInterval(update, 600)
+}
+
+setTimeout(setupUpdate, 300)
 
 
 
