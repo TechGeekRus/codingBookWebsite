@@ -1,64 +1,76 @@
-body{
+body {
     font-family: 'Courier New', Courier, monospace;
-    margin: 30px;
-   }
-
-h1, h2{
-    color: black;
 }
-#timer-section, #books-section, #quote-section{
+
+#timer-section, #books-section, #quote-section {
     margin-bottom: 30px;
     padding: 20px;
-    background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 8px black;
+    box-shadow: 0 2px 8px orange;
+    color: green;
 }
 
-#timer{
+#timer {
     margin: 10px 0;
 }
 
-button{
-margin-right: 10px;
-padding: 6px 14px;
-border: none;
-border-radius: 4px;
-cursor: pointer;
+button {
+    margin-right: 10px;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-ul#books-list{
+ul#books-list {
     list-style: circle;
     padding: 0;
 }
 
-ul#books-list li{
+ul#books-list li {
     margin-bottom: 10px;
     padding: 8px;
-    background: white;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.timer-music{
+.timer-music {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
 }
 
-#timer-controls{
+#timer-controls {
     flex: 1;
     margin-right: 30px;
+    box-shadow: 0 2px 8px red;
+
 }
 
-#music-section{
+#music-section {
     flex: 1;
     max-width: 300px;
-    background: white;
     padding: 16px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px black;
+    box-shadow: 0 2px 8px yellow;
     cursor: pointer;
+    color: purple;
+
 }
 
+canvas#c {
+    position: fixed;
+    /* Make it cover the viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* Put it behind everything else */
+    pointer-events: none;
+    /* Allow clicks to pass through */
+    display: block;
+}
