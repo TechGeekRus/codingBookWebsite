@@ -63,14 +63,11 @@ ul#books-list li {
 
 canvas#c {
     position: fixed;
-    /* Make it cover the viewport */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: -1;
-    /* Put it behind everything else */
     pointer-events: none;
-    /* Allow clicks to pass through */
     display: block;
 }
